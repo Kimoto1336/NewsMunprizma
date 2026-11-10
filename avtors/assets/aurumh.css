@@ -1,0 +1,397 @@
+/* ==========================================================================
+   AURUMHELL THEME — Магическая эстетика, сны и эзотерика
+   ========================================================================== */
+:root {
+  /* Палитра Aurumh: темный индиго (космос/магия) и Золото (Aurum) */
+  --bg: #0f0c16;
+  --bg-soft: #171321;
+  --panel: #1e192c;
+  --panel-dark: #120e1a;
+  --line: #3b3052;
+  --yellow: #d4af37; /* Золото (Aurum) */
+  --coral: #9b5de5;  /* Мистический фиолетовый */
+  --mint: #00f5d4;   /* Магическое свечение */
+  --blue: #f15bb5;
+  --cream: #f4eeff;  /* Светлый текст (страницы книги) */
+  --muted: #a39bb5;
+  --radius: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--cream);
+  font-family: 'Lora', serif; /* Книжный шрифт для текста */
+  line-height: 1.7;
+  font-size: 1.15rem;
+}
+
+h1, h2, h3, h4, h5, h6, .display-title, .brand, .footer-brand {
+  font-family: 'Cinzel', serif; /* Мистический антиквенный шрифт для заголовков */
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid var(--coral);
+  outline-offset: 4px;
+}
+
+/* ==========================================================================
+   Шапка (Header) — размеры и стиль строго из firchik.css
+   ========================================================================== */
+.site-header {
+  background-color: rgba(23, 19, 33, 0.95);
+  border-bottom: 2px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+}
+
+.header-link {
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 1.5rem; /* Размер как в firchik.css */
+  font-family: 'Cinzel', serif;
+  transition: color 0.2s ease;
+}
+
+.header-link:hover,
+.header-link.active {
+  color: var(--yellow); 
+}
+
+.header-icon {
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 1.75rem; /* Размер как в firchik.css */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.header-icon:hover {
+  color: var(--yellow);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   General Components & Sections
+   ========================================================================== */
+.section-spacing {
+  padding: 88px 0;
+}
+
+.section-muted {
+  background: var(--bg-soft);
+  border-block: 1px solid var(--line);
+}
+
+.eyebrow,
+.section-kicker,
+.mini-label,
+.media-label {
+  color: var(--mint);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-family: 'Cinzel', serif;
+}
+
+.display-title {
+  font-size: clamp(2.8rem, 6vw, 5.3rem);
+  line-height: 1.1;
+  font-weight: 700;
+  color: var(--cream);
+  letter-spacing: 0.02em;
+}
+
+.display-title span,
+.section-title {
+  color: var(--yellow);
+}
+
+.lead {
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+.hero-description {
+  max-width: 650px;
+  color: var(--cream);
+}
+
+.hero-quote {
+  color: var(--coral);
+  font-style: italic;
+  border-left: 3px solid var(--coral);
+  padding-left: 16px;
+  font-size: 1.2rem;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  line-height: 1.15;
+}
+
+.section-intro {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 1.15rem;
+}
+
+/* Buttons */
+.btn-game {
+  border-radius: 12px;
+  padding: 11px 22px;
+  font-weight: 700;
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  transition: transform 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.btn-game:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+}
+
+.btn-game-primary {
+  background: var(--yellow);
+  color: var(--bg);
+  border: 2px solid var(--yellow);
+}
+
+.btn-game-primary:hover {
+  background: #fce79c;
+  border-color: #fce79c;
+  color: var(--bg);
+}
+
+.btn-game-outline {
+  border: 2px solid var(--mint);
+  color: var(--mint);
+}
+
+.btn-game-outline:hover {
+  background: var(--mint);
+  color: var(--bg);
+}
+
+/* Cards & Panels */
+.character-card,
+.game-panel,
+.project-card,
+.contact-panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.character-card {
+  max-width: 470px;
+}
+
+/* Магический аватар-заглушка */
+
+.character-card .avatar {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 13px;
+  border: 2px solid var(--line);
+  background: var(--bg-soft);
+  box-shadow: inset 0 0 40px rgba(0,0,0,0.8);
+}
+
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 100px;
+  padding: 5px 10px;
+  background: rgba(155, 93, 229, 0.15);
+  color: var(--coral);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-family: 'Cinzel', serif;
+}
+
+.text-soft {
+  color: var(--muted);
+}
+
+.stat-track {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.stat-track > span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--coral), var(--mint));
+  border-radius: inherit;
+}
+
+.game-panel p {
+  color: var(--cream);
+  font-size: 1.1rem;
+}
+
+.accent {
+  color: var(--yellow);
+}
+
+/* ==========================================================================
+   Увлечения (Хобби/Лор/Игры)
+   ========================================================================== */
+.game-tile {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.game-tile:hover {
+  transform: translateY(-7px);
+  border-color: var(--coral);
+  box-shadow: 0 16px 30px rgba(155, 93, 229, 0.15);
+}
+
+.game-tile-title {
+  color: var(--yellow);
+  font-weight: 700;
+  font-size: 1.35rem;
+  font-family: 'Cinzel', serif;
+}
+
+.game-tile p {
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.game-art {
+  aspect-ratio: 16/7;
+  display: grid;
+  place-items: center;
+  font-size: 3.5rem;
+  color: var(--cream);
+  background: var(--panel-dark);
+}
+
+.art-genshin { background: linear-gradient(140deg, #1c3d5a, #0b1a29); color: #8fd0ff; }
+.art-lore    { background: linear-gradient(140deg, #511c29, #1c0910); color: #ff6b6b; }
+.art-myth    { background: linear-gradient(140deg, #371e54, #120a1c); color: var(--coral); }
+.art-code    { background: linear-gradient(140deg, #1e4d3a, #0b2118); color: var(--mint); }
+
+
+/* ==========================================================================
+   Подвал (Footer) — размеры и структура строго из firchik.css
+   ========================================================================== */
+.site-footer {
+  background-color: var(--panel-dark);
+  border-top: 2px solid var(--line); 
+  color: var(--muted);
+}
+.footer-logo-placeholder {
+  width: 45px; 
+  height: 45px;
+  border-radius: 50%;
+  background-color: var(--panel);
+  border: 1px solid var(--yellow);
+  color: var(--yellow);
+  font-size: 1.25rem;
+}
+.footer-brand {
+  font-size: 1.5rem; 
+  font-weight: 700;
+  color: var(--cream);
+  font-family: 'Cinzel', serif;
+}
+.footer-desc {
+  font-size: 0.875rem; 
+  color: var(--muted);
+  line-height: 1.6;
+}
+.social-icon {
+  color: var(--muted);
+  font-size: 1.35rem; 
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.social-icon:hover {
+  color: var(--yellow); 
+  transform: translateY(-2px);
+}
+.footer-heading {
+  color: var(--cream);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem; 
+  letter-spacing: 0.5px;
+  font-family: 'Cinzel', serif;
+}
+.footer-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.875rem; 
+  transition: color 0.2s ease;
+}
+.footer-link:hover {
+  color: var(--yellow); 
+}
+.footer-divider {
+  border-color: var(--line);
+  opacity: 0.3;
+}
+.footer-bottom {
+  font-size: 0.85rem; 
+  color: var(--muted);
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 767.98px) {
+  .section-spacing {
+    padding: 60px 0;
+  }
+  .character-card,
+  .game-panel,
+  .game-tile {
+    padding: 20px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *:before,
+  *:after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

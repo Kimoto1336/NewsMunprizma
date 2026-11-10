@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Firchik23 — игрок, разработчик и создатель собственных миров.">
+  <title>Firchik23 — Игрок и разработчик</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/firchik.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container-fluid px-4 py-3 d-flex justify-content-between align-items-center">
+      <nav class="d-flex gap-4">
+        <a href="../index.html" class="header-link">Главное</a>
+        <a href="#" class="header-link">Новости</a>
+        <a href="#" class="header-link">Проекты</a>
+        <a href="avtors.html" class="header-link">О нас</a>
+      </nav>
+
+      <div class="d-flex align-items-center gap-3">
+        <a href="#" class="header-icon" aria-label="Закладки"><i class="bi bi-bookmark-fill"></i></a>
+        <a href="../avatar/login.html" class="header-icon" aria-label="Профиль"><i class="bi bi-person-fill"></i></a>
+        <a href="#" class="header-icon" aria-label="Поиск"><i class="bi bi-search"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero-section section-spacing">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <h1 class="display-title mt-3">Привет, путник!<br>Я <span>Firchik23</span>.</h1>
+            <p class="lead hero-description">Люблю исследовать игровые миры, смеяться с друзьями и создавать собственные — с помощью кода.</p>
+            <p class="hero-quote">«Не знаю, куда приведёт это путешествие, но уверен, что будет весело!»</p>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a href="#projects" class="btn btn-game btn-game-primary">Посмотреть мои миры ↗</a>
+              <a href="#about" class="btn btn-game btn-game-outline">Карточка персонажа ↓</a>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="character-card mx-auto">
+              <div class="d-flex justify-content-between align-items-center gap-2 mb-3">
+                <span class="mini-label">CHARACTER PROFILE №023</span>
+              </div>
+              <img class="avatar img-fluid" src="assets/img/firchik-avatar.jpg" alt="Аватар Firchik23" width="480" height="360">
+              <h2 class="h3 mt-3 mb-1">FIRCHIK23</h2>
+              <p class="text-soft mb-3">Класс: Добряк-авантюрист</p>
+              <div class="d-flex justify-content-between small mb-2"><span>HP: 100/100</span><span>Настроение: 999+</span></div>
+              <div class="stat-track"><span style="width:100%"></span></div>
+              <p class="small text-soft mt-3 mb-0">Уровень: опыт постоянно растёт ✨</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section-spacing section-muted">
+      <div class="container">
+        <p class="section-kicker">01 / ЗНАКОМСТВО</p>
+        <h2 class="section-title">Информация о персонаже</h2>
+        <div class="row g-4 mt-1">
+          <div class="col-lg-6"><div class="game-panel h-100"><h3 class="h4 accent">Немного обо мне</h3>
+            <p>Привет! Я Firchik23 — люблю хорошие шутки, интересные игры и приятную компанию. Могу отправиться исследовать Тамриэль, строить что-то в Minecraft, а потом неожиданно увлечься созданием нового сайта.</p>
+            <p class="mb-0">Здесь я собрал то, что мне нравится, и проекты, над которыми работаю. Добро пожаловать в мою маленькую вселенную!</p>
+          </div></div>
+          <div class="col-lg-6"><div class="game-panel h-100"><h3 class="h4 accent mb-4">Характеристики</h3>
+            <div class="skill-stat"><div><span>Доброта</span><span>96/100</span></div><div class="stat-track"><span style="width:96%"></span></div></div>
+            <div class="skill-stat"><div><span>Чувство юмора</span><span>94/100</span></div><div class="stat-track coral"><span style="width:94%"></span></div></div>
+            <div class="skill-stat"><div><span>Общительность</span><span>90/100</span></div><div class="stat-track blue"><span style="width:90%"></span></div></div>
+            <div class="skill-stat"><div><span>Удача</span><span>55/100</span></div><div class="stat-track"><span style="width:55%"></span></div></div>
+            <div class="skill-stat mb-0"><div><span>Сопротивление мемам</span><span>12/100</span></div><div class="stat-track coral"><span style="width:12%"></span></div></div>
+          </div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="games" class="section-spacing">
+      <div class="container">
+        <p class="section-kicker">02 / ИЗБРАННЫЕ ВСЕЛЕННЫЕ</p>
+        <h2 class="section-title">Миры, в которых я бываю</h2>
+        <p class="section-intro">Пять игровых миров, куда всегда приятно заглянуть. У каждого — свой квест и своя атмосфера.</p>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mt-1">
+          <div class="col">
+            <a href="https://www.minecraft.net/" target="_blank" rel="noopener noreferrer" class="game-tile h-100 text-decoration-none d-flex flex-column" aria-label="Открыть Minecraft">
+              <div class="game-art art-minecraft" aria-hidden="true">⛏</div>
+              <div class="p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <h3 class="h5 mb-0 game-tile-title">Minecraft</h3>
+                  <span class="game-tile-badge" aria-hidden="true">↗</span>
+                </div>
+                <p class="mb-3 text-soft">Строить, копать, исследовать. Ещё один домик — и спать.</p>
+                <div class="mt-auto">
+                  <span class="btn btn-game btn-game-outline btn-sm w-100">Перейти к игре ↗</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col">
+            <a href="https://store.steampowered.com/app/570/Dota_2/" target="_blank" rel="noopener noreferrer" class="game-tile h-100 text-decoration-none d-flex flex-column" aria-label="Открыть Dota 2 в Steam">
+              <div class="game-art art-dota" aria-hidden="true">⚔</div>
+              <div class="p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <h3 class="h5 mb-0 game-tile-title">Dota 2</h3>
+                  <span class="game-tile-badge" aria-hidden="true">↗</span>
+                </div>
+                <p class="mb-3 text-soft">Командная игра и регулярная прокачка терпения.</p>
+                <div class="mt-auto">
+                  <span class="btn btn-game btn-game-outline btn-sm w-100">Перейти к игре ↗</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col">
+            <a href="https://store.steampowered.com/app/489830/The_Elder_Scrolls_V_Skyrim_Special_Edition/" target="_blank" rel="noopener noreferrer" class="game-tile h-100 text-decoration-none d-flex flex-column" aria-label="Открыть Skyrim в Steam">
+              <div class="game-art art-skyrim" aria-hidden="true">🐉</div>
+              <div class="p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <h3 class="h5 mb-0 game-tile-title">The Elder Scrolls V: Skyrim</h3>
+                  <span class="game-tile-badge" aria-hidden="true">↗</span>
+                </div>
+                <p class="mb-3 text-soft">Побочные задания сами себя не выполнят.</p>
+                <div class="mt-auto">
+                  <span class="btn btn-game btn-game-outline btn-sm w-100">Перейти к игре ↗</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col">
+            <a href="https://store.steampowered.com/app/377160/Fallout_4/" target="_blank" rel="noopener noreferrer" class="game-tile h-100 text-decoration-none d-flex flex-column" aria-label="Открыть Fallout 4 в Steam">
+              <div class="game-art art-fallout" aria-hidden="true">☢</div>
+              <div class="p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <h3 class="h5 mb-0 game-tile-title">Fallout 4</h3>
+                  <span class="game-tile-badge" aria-hidden="true">↗</span>
+                </div>
+                <p class="mb-3 text-soft">Пустошь зовёт. И поселению снова нужна помощь.</p>
+                <div class="mt-auto">
+                  <span class="btn btn-game btn-game-outline btn-sm w-100">Перейти к игре ↗</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col">
+            <a href="https://store.steampowered.com/app/1942280/Brotato/" target="_blank" rel="noopener noreferrer" class="game-tile h-100 text-decoration-none d-flex flex-column" aria-label="Открыть Brotato в Steam">
+              <div class="game-art art-brotato" aria-hidden="true">🥔</div>
+              <div class="p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <h3 class="h5 mb-0 game-tile-title">Brotato</h3>
+                  <span class="game-tile-badge" aria-hidden="true">↗</span>
+                </div>
+                <p class="mb-3 text-soft">Картошка с характером и очень большим арсеналом.</p>
+                <div class="mt-auto">
+                  <span class="btn btn-game btn-game-outline btn-sm w-100">Перейти к игре ↗</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section-spacing section-muted">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-end gap-3"><div><p class="section-kicker">03 / WORLD SELECT</p><h2 class="section-title mb-0">Мои созданные миры</h2></div><span class="status-pill">МИРОВ СОЗДАНО: 02</span></div>
+        <p class="section-intro mt-3">Когда исследовать чужие миры стало недостаточно, я решил создавать свои. Ниже — два моих проекта: кадр из каждого и небольшая прогулка по нему.</p>
+        <div class="row g-4 mt-1">
+          <div class="col-lg-6"><article class="project-card h-100">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3"><h3 class="h4 mb-0">01. ИБЧ?</h3><span class="status-pill">РАЗБЛОКИРОВАН</span></div>
+            <figure class="mb-3"><span class="media-label">СКРИНШОТ САЙТА</span><img class="project-media" src="assets/img/project-1.png" alt="Скриншот первого сайта" loading="lazy" width="960" height="540"></figure>
+            <figure class="mb-3"><span class="media-label">ПРОГУЛКА ПО САЙТУ </span><img class="project-media" src="assets/img/project-1-demo.gif" alt="Демонстрация навигации по первому сайту" loading="lazy" width="960" height="540"></figure>
+            <p>Данный сайт создан для того, чтобы просто убить время и повеселиться одному или с друзьями.</p>
+            <div class="d-flex flex-wrap gap-2 mb-4"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">Bootstrap 5</span></div>
+            <a href="https://kimoto1336-github-io.vercel.app/" target="_blank" class="btn btn-game btn-game-primary mt-auto project-link" aria-label="Открыть первый проект">Посетить мир ↗</a>
+          </article></div>
+
+          <div class="col-lg-6"><article class="project-card h-100">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3"><h3 class="h4 mb-0">02. В разработке</h3><span class="status-pill">В РАЗРАБОТКЕ</span></div>
+            <figure class="mb-3"><span class="media-label">СКРИНШОТ САЙТА</span><img class="project-media" src="assets/img/project-2-demo.jpg" alt="Скриншот второго сайта" loading="lazy" width="960" height="540"></figure>
+            <figure class="mb-3"><span class="media-label">ПРОГУЛКА ПО САЙТУ </span><img class="project-media" src="assets/img/rabotay.gif" alt="Демонстрация навигации по второму сайту" loading="lazy" width="960" height="540"></figure>
+            <p>пупупу... ну работа идет (честно)</p>
+            <div class="d-flex flex-wrap gap-2 mb-4"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">Bootstrap 5</span></div>
+            <a href="#" class="btn btn-game btn-game-primary mt-auto project-link" aria-label="Открыть второй проект (укажите настоящий адрес)">Посетить мир ↗</a>
+          </article></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section-spacing">
+      <div class="container"><p class="section-kicker">04 / ИНВЕНТАРЬ</p><h2 class="section-title">Дерево навыков</h2>
+        <div class="row g-4 mt-1"><div class="col-md-6"><div class="game-panel h-100"><h3 class="h4 accent">Разработка</h3><p>Технологии, с которыми я работаю:</p><div class="d-flex flex-wrap gap-2"><span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span class="tech-tag">Bootstrap 5</span><span class="tech-tag">Git</span></div></div></div>
+        <div class="col-md-6"><div class="game-panel h-100"><h3 class="h4 accent">Активные задания</h3><ul class="quest-list mb-0"><li class="done">Найти любимые игровые миры</li><li class="done">Создать собственные проекты</li><li>Прокачать новые навыки</li><li>Не начать очередное прохождение Skyrim</li></ul></div></div></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-spacing section-muted"><div class="container"><div class="contact-panel text-center mx-auto"><p class="section-kicker">05 / НОВОЕ ЗАДАНИЕ</p><h2 class="section-title">Отправимся в приключение?</h2><p>Буду рад знакомству, общению и интересным идеям. Выбери способ связи — и увидимся в следующей локации!</p>
+      <div class="d-flex flex-wrap justify-content-center gap-3 mt-4"><a class="btn btn-game btn-game-primary" href="https://www.youtube.com/@Firchik23" target="_blank" rel="noopener noreferrer">YouTube ↗</a><a class="btn btn-game btn-game-outline" href="https://www.twitch.tv/firchik23" target="_blank">Twitch ↗</a></div>
+      <p class="small text-soft mt-4 mb-0">Награда: +1 новый знакомый и хорошее настроение.</p></div></div></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container py-5">
+      <div class="row justify-content-between g-4">
+        <div class="col-12 col-md-6">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div class="footer-logo-placeholder d-flex align-items-center justify-content-center">
+              <i class="bi bi-circle-fill"></i>
+            </div>
+            <span class="footer-brand">munprizma</span>
+          </div>
+          <p class="footer-desc mb-3">
+            Блог команды разработчиков: делимся историями создания проектов, новостями технологий, полезными гайдами и студенческим опытом.
+          </p>
+          <div class="d-flex gap-3">
+            <a href="#" class="social-icon" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+            <a href="#" class="social-icon" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="#" class="social-icon" aria-label="RSS"><i class="bi bi-rss-fill"></i></a>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <h6 class="footer-heading mb-3">Навигация</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+            <li><a href="../index.html" class="footer-link">Главная</a></li>
+            <li><a href="#" class="footer-link">Новости</a></li>
+            <li><a href="avtors.html" class="footer-link">Об авторах</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="footer-divider my-4">
+
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 footer-bottom">
+        <div>
+          &copy; 2026 munprizma. Спасибо, что выбираете нас!
+        </div>
+        <div class="d-flex gap-3">
+          <a href="#" class="footer-link">Политика конфиденциальности</a>
+          <a href="#" class="footer-link">Условия использования</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

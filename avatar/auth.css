@@ -1,0 +1,198 @@
+:root {
+  --bg-dark: #12151b;
+  --panel-bg: #1E2229;
+  --accent-cyan: #00D2FF;
+  --card-bg: #242933;
+  --card-hover-bg: #2d3441;
+  --input-bg: #181c23;
+  --input-border: #333a47;
+  --text-main: #ffffff;
+  --text-muted: #8c93a0;
+  --danger-star: #ff4d4f;
+}
+body.site-body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+.site-header {
+  background-color: var(--panel-bg);
+  border-bottom: 2px solid var(--accent-cyan);
+}
+.header-link {
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.2s ease;
+}
+.header-link:hover {
+  color: var(--accent-cyan);
+}
+.header-icon {
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 1.75rem;
+  transition: color 0.2s ease;
+}
+.header-icon:hover {
+  color: var(--accent-cyan);
+}
+.auth-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  width: 100%;
+  max-width: 480px;
+}
+.auth-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.5px;
+}
+.auth-subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+.auth-label {
+  color: var(--text-main);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.text-danger {
+  color: var(--danger-star) !important;
+}
+.auth-input-icon {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-right: none;
+  color: var(--accent-cyan);
+  font-size: 1.15rem;
+}
+.auth-input {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--text-main);
+  font-size: 0.95rem;
+  padding: 0.7rem 0.9rem;
+  box-shadow: none !important;
+}
+.auth-input:focus {
+  background-color: var(--input-bg);
+  border-color: var(--accent-cyan);
+  color: var(--text-main);
+  box-shadow: none !important;
+}
+.auth-input::placeholder {
+  color: #5c6474;
+}
+.auth-checkbox {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  box-shadow: none !important;
+}
+.auth-checkbox:checked {
+  background-color: var(--accent-cyan);
+  border-color: var(--accent-cyan);
+}
+.auth-checkbox:focus {
+  box-shadow: none !important;
+}
+.auth-btn {
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  border: 1px solid var(--accent-cyan);
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  box-shadow: none !important;
+}
+.auth-btn:hover {
+  background-color: var(--accent-cyan);
+  color: #12151b;
+  border-color: var(--accent-cyan);
+  box-shadow: none !important;
+}
+.auth-btn:active {
+  transform: none;
+}
+.auth-helper-link {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.auth-helper-link:hover {
+  color: var(--accent-cyan);
+}
+.auth-accent-link {
+  color: var(--accent-cyan);
+  font-weight: 600;
+  text-decoration: none;
+}
+.auth-accent-link:hover {
+  text-decoration: underline;
+}
+.auth-footer-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+.site-footer {
+  background-color: var(--panel-bg);
+  border-top: 2px solid var(--accent-cyan);
+}
+.footer-logo-placeholder {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #16191f;
+  border: 1px solid var(--accent-cyan);
+  color: var(--accent-cyan);
+  font-size: 1.25rem;
+}
+.footer-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+.footer-desc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.footer-heading {
+  color: var(--text-main);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+.social-icon {
+  color: var(--text-muted);
+  font-size: 1.35rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.social-icon:hover {
+  color: var(--accent-cyan);
+}
+.footer-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+.footer-link:hover {
+  color: var(--accent-cyan);
+}
+.footer-divider {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.footer-bottom {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
