@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<title>Новости — munprizma</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="News.css">
+  <link rel="stylesheet" href="../site-search.css">
+</head>
+<body class="site-body">
+  <header class="site-header">
+    <div class="container-fluid px-4 py-3 d-flex justify-content-between align-items-center">
+      <nav class="d-flex gap-4">
+        <a href="../index.html" class="header-link">Главное</a>
+        <a href="News.html" class="header-link" aria-current="page">Новости</a>
+        <a href="#" class="header-link">Проекты</a>
+        <a href="../avtors/avtors.html" class="header-link">О нас</a>
+      </nav>
+
+      <div class="d-flex align-items-center gap-3">
+        <a href="../avatar/login.html" class="header-icon" aria-label="Профиль"><i class="bi bi-person-fill"></i></a>
+        <button type="button" class="header-icon site-search-toggle" aria-label="Поиск" aria-expanded="false" aria-controls="siteSearchPanel"><i class="bi bi-search"></i></button>
+      </div>
+        </div>
+
+    <div class="site-search-panel" id="siteSearchPanel" hidden>
+      <form class="site-search-form" id="siteSearchForm">
+        <label class="form-label" for="siteSearchInput">Поиск по сайту</label>
+        <div class="input-group">
+          <input class="form-control" id="siteSearchInput" type="search" placeholder="Введите слово или фразу" autocomplete="off" required>
+          <button class="btn site-search-submit" type="submit">Найти</button>
+        </div>
+      </form>
+      <div class="site-search-results" id="siteSearchResults" aria-live="polite"></div>
+    </div>
+  </header>
+
+  <main class="news-main py-5">
+    <div class="container">
+      <section class="news-heading mb-5">
+        <div class="news-heading-copy">
+          <p class="news-eyebrow mb-2"><i class="bi bi-newspaper me-2"></i>Журнал команды munprizma</p>
+          <h1 class="news-title mb-3">Новости</h1>
+          <p class="news-subtitle mb-0">Рассказываем о наших проектах, идеях и событиях команды.</p>
+        </div>
+        <button type="button" class="btn news-primary-btn" id="addNewsButton">
+          <i class="bi bi-plus-lg me-2"></i>Добавить новость
+        </button>
+      </section>
+
+      <section class="news-tools mb-4" aria-label="Поиск новостей">
+        <div class="row g-3 align-items-center">
+          <div class="col-12 col-lg-8">
+            <label class="visually-hidden" for="newsSearch">Поиск новостей</label>
+            <div class="input-group news-search-group">
+              <span class="input-group-text"><i class="bi bi-search"></i></span>
+              <input type="search" class="form-control" id="newsSearch" placeholder="Поиск по новостям..." autocomplete="off">
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 text-lg-end">
+            <span class="news-count" id="newsCount" aria-live="polite">Новостей: 0</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="row g-4" id="newsList" aria-live="polite"></div>
+
+      <section class="news-empty text-center py-5" id="emptyState">
+        <div class="news-empty-icon mb-3"><i class="bi bi-journal-plus"></i></div>
+        <h2 class="h3 mb-2" id="emptyTitle">Пока нет новостей</h2>
+        <p class="news-empty-text mb-4" id="emptyText">Создайте первую запись, чтобы поделиться новостями команды.</p>
+        <button type="button" class="btn news-primary-btn" id="emptyAddButton">
+          <i class="bi bi-plus-lg me-2"></i>Создать новость
+        </button>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container py-5">
+      <div class="row justify-content-between g-4">
+        <div class="col-12 col-md-6">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <img src="../da.png" class="footer-logo-image" alt="Логотип munprizma" width="46" height="50">
+            <span class="footer-brand">munprizma</span>
+          </div>
+          <p class="footer-desc mb-3">
+            Блог команды разработчиков: делимся историями создания проектов, новостями технологий, полезными гайдами и студенческим опытом.
+          </p>
+          <div class="d-flex gap-3">
+            <a href="#" class="social-icon" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+            <a href="#" class="social-icon" aria-label="VK"><i class="bi bi-globe"></i></a>
+            <a href="#" class="social-icon" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="#" class="social-icon" aria-label="RSS"><i class="bi bi-rss-fill"></i></a>
+          </div>
+        
+          <a href="mailto:munprizmab51@gmail.com" class="footer-contact-button" aria-label="Связаться с командой по электронной почте">
+            <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+            <span>Связаться с командой</span>
+          </a>
+        </div>
+        <div class="col-12 col-md-4">
+          <h6 class="footer-heading mb-3">Навигация</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+            <li><a href="../index.html" class="footer-link">Главная</a></li>
+            <li><a href="News.html" class="footer-link">Новости</a></li>
+            <li><a href="../avtors/avtors.html" class="footer-link">Об авторах</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="footer-divider my-4">
+
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 footer-bottom">
+        <div>
+          &copy; 2026 munprizma. Спасибо, что выбираете нас!
+        </div>
+        <div class="d-flex gap-3">
+          <a href="#" class="footer-link">Политика конфиденциальности</a>
+          <a href="#" class="footer-link">Условия использования</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="newsModal" tabindex="-1" aria-labelledby="newsModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+      <div class="modal-content news-modal-content">
+        <div class="modal-header news-modal-header">
+          <div>
+            <p class="news-eyebrow mb-1">Публикация munprizma</p>
+            <h2 class="modal-title h3" id="newsModalTitle">Новая новость</h2>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <form id="newsForm">
+          <div class="modal-body p-4">
+            <input type="hidden" id="newsId">
+            <div class="mb-3">
+              <label for="newsTitle" class="form-label news-form-label">Заголовок</label>
+              <input type="text" class="form-control news-form-control" id="newsTitle" maxlength="120" placeholder="Введите заголовок новости" required>
+            </div>
+            <div class="row g-3 mb-3">
+              <div class="col-12 col-md-6">
+                <label for="newsCategory" class="form-label news-form-label">Категория</label>
+                <select class="form-select news-form-control" id="newsCategory" required>
+                  <option value="Команда">Команда</option>
+                  <option value="Проекты">Проекты</option>
+                  <option value="Технологии">Технологии</option>
+                  <option value="Обновления">Обновления</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="newsDate" class="form-label news-form-label">Дата публикации</label>
+                <input type="date" class="form-control news-form-control" id="newsDate" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="newsExcerpt" class="form-label news-form-label">Краткое описание</label>
+              <textarea class="form-control news-form-control" id="newsExcerpt" rows="2" maxlength="260" placeholder="Кратко опишите содержание новости"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="newsContent" class="form-label news-form-label">Текст новости</label>
+              <textarea class="form-control news-form-control" id="newsContent" rows="6" placeholder="Напишите текст публикации..." required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="newsImage" class="form-label news-form-label">Ссылка на изображение <span class="news-optional">(необязательно)</span></label>
+              <input type="url" class="form-control news-form-control" id="newsImage" placeholder="https://example.com/image.jpg">
+            </div>
+            <div>
+              <label for="newsImageFile" class="form-label news-form-label">Загрузить изображение с компьютера <span class="news-optional">(необязательно)</span></label>
+              <input type="file" class="form-control news-form-control" id="newsImageFile" accept="image/*">
+              <div class="news-image-preview mt-3" id="newsImagePreview" hidden><img src="" alt="Предпросмотр изображения"></div>
+              <div class="form-text news-image-help">Изображение будет уменьшено и сохранено вместе с новостью в браузере.</div>
+            </div>
+            <div class="news-form-error mt-3" id="formError" role="alert" hidden></div>
+          </div>
+          <div class="modal-footer news-modal-footer">
+            <button type="button" class="btn news-secondary-btn" data-bs-dismiss="modal">Отмена</button>
+            <button type="submit" class="btn news-primary-btn" id="saveNewsButton"><i class="bi bi-check2 me-2"></i>Сохранить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="news-toast" id="newsToast" role="status" aria-live="polite" hidden></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const storageKey = 'munprizma-news-v1';
+    const newsList = document.getElementById('newsList');
+    const emptyState = document.getElementById('emptyState');
+    const emptyTitle = document.getElementById('emptyTitle');
+    const emptyText = document.getElementById('emptyText');
+    const newsCount = document.getElementById('newsCount');
+    const newsSearch = document.getElementById('newsSearch');
+    const newsForm = document.getElementById('newsForm');
+    const newsModalElement = document.getElementById('newsModal');
+    const newsModal = new bootstrap.Modal(newsModalElement);
+    const newsToast = document.getElementById('newsToast');
+    const formError = document.getElementById('formError');
+    const newsImageFile = document.getElementById('newsImageFile');
+    const newsImagePreview = document.getElementById('newsImagePreview');
+    let newsItems = loadNews();
+    let toastTimer;
+
+    function loadNews() {
+      try {
+        const savedNews = localStorage.getItem(storageKey);
+        const parsedNews = savedNews ? JSON.parse(savedNews) : [];
+        return Array.isArray(parsedNews) ? parsedNews : [];
+      } catch (error) {
+        return [];
+      }
+    }
+
+    function saveNews() {
+      try {
+        localStorage.setItem(storageKey, JSON.stringify(newsItems));
+        return true;
+      } catch (error) {
+        showToast('Не удалось сохранить данные в браузере. Проверьте настройки хранилища.');
+        return false;
+      }
+    }
+
+    function showToast(message) {
+      window.clearTimeout(toastTimer);
+      newsToast.textContent = message;
+      newsToast.hidden = false;
+      toastTimer = window.setTimeout(() => {
+        newsToast.hidden = true;
+      }, 3500);
+    }
+
+    function formatDate(value) {
+      const date = new Date(`${value}T00:00:00`);
+      if (Number.isNaN(date.getTime())) return value;
+      return new Intl.DateTimeFormat('ru-RU', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric'
+      }).format(date);
+    }
+
+    function createElement(tag, className, text) {
+      const element = document.createElement(tag);
+      if (className) element.className = className;
+      if (text !== undefined) element.textContent = text;
+      return element;
+    }
+
+    function safeImageUrl(value) {
+      if (!value) return '';
+      if (/^data:image\/(png|jpeg|jpg|webp|gif);base64,/i.test(value)) return value;
+      try {
+        const url = new URL(value);
+        return ['http:', 'https:'].includes(url.protocol) ? url.href : '';
+      } catch (error) {
+        return '';
+      }
+    }
+
+    function setImagePreview(source) {
+      const safeSource = safeImageUrl(source);
+      newsImagePreview.hidden = !safeSource;
+      newsImagePreview.querySelector('img').src = safeSource;
+    }
+
+    function compressImage(file) {
+      return new Promise((resolve, reject) => {
+        if (!file.type.startsWith('image/')) return reject(new Error('Выберите файл изображения.'));
+        if (file.size > 12000000) return reject(new Error('Размер исходного изображения не должен превышать 12 МБ.'));
+        const reader = new FileReader();
+        reader.onerror = () => reject(new Error('Не удалось прочитать файл изображения.'));
+        reader.onload = () => {
+          const image = new Image();
+          image.onerror = () => reject(new Error('Не удалось открыть это изображение.'));
+          image.onload = () => {
+            const scale = Math.min(1, 1400 / image.width, 1000 / image.height);
+            const canvas = document.createElement('canvas');
+            canvas.width = Math.max(1, Math.round(image.width * scale));
+            canvas.height = Math.max(1, Math.round(image.height * scale));
+            canvas.getContext('2d').drawImage(image, 0, 0, canvas.width, canvas.height);
+            resolve(canvas.toDataURL('image/jpeg', 0.82));
+          };
+          image.src = reader.result;
+        };
+        reader.readAsDataURL(file);
+      });
+    }
+
+    function createNewsCard(item) {
+      const column = createElement('div', 'col-12 col-md-6 col-xl-4');
+      const card = createElement('article', 'news-card h-100');
+      card.dataset.newsId = item.id;
+      const imageUrl = safeImageUrl(item.image);
+
+      if (imageUrl) {
+        const imageWrap = createElement('div', 'news-card-image');
+        const image = createElement('img', '');
+        image.src = imageUrl;
+        image.alt = item.title;
+        image.loading = 'lazy';
+        image.addEventListener('error', () => imageWrap.remove());
+        imageWrap.append(image);
+        card.append(imageWrap);
+      } else {
+        const imagePlaceholder = createElement('div', 'news-card-placeholder');
+        const placeholderIcon = createElement('i', 'bi bi-newspaper');
+        placeholderIcon.setAttribute('aria-hidden', 'true');
+        imagePlaceholder.append(placeholderIcon);
+        card.append(imagePlaceholder);
+      }
+
+      const content = createElement('div', 'news-card-content');
+      const meta = createElement('div', 'd-flex justify-content-between align-items-center gap-2 mb-3');
+      meta.append(createElement('span', 'news-category', item.category || 'Новости'));
+      const date = createElement('time', 'news-date', formatDate(item.date));
+      date.dateTime = item.date;
+      meta.append(date);
+      content.append(meta);
+
+      content.append(createElement('h2', 'news-card-title', item.title));
+      if (item.excerpt) content.append(createElement('p', 'news-card-excerpt', item.excerpt));
+
+      if (item.content) {
+        const detailsId = `news-details-${item.id}`;
+        const expandedContent = createElement('div', 'news-card-expanded-content');
+        expandedContent.id = detailsId;
+        expandedContent.hidden = true;
+
+        const collapseBar = createElement('div', 'news-collapse-bar');
+        const collapseButton = createElement('button', 'news-collapse-button');
+        collapseButton.type = 'button';
+        collapseButton.innerHTML = '<i class="bi bi-chevron-up me-2" aria-hidden="true"></i>Свернуть';
+        collapseButton.setAttribute('aria-label', `Свернуть новость: ${item.title}`);
+        collapseBar.append(collapseButton);
+
+        const fullText = createElement('p', 'news-card-full-text');
+        fullText.textContent = item.content;
+
+        const readButton = createElement('button', 'news-read-button', 'Читать далее');
+        readButton.type = 'button';
+        readButton.setAttribute('aria-expanded', 'false');
+        readButton.setAttribute('aria-controls', detailsId);
+
+        const setExpanded = expanded => {
+          if (expanded) {
+            column.className = 'col-12';
+            card.classList.add('news-card-expanded');
+            expandedContent.hidden = false;
+            readButton.hidden = true;
+          } else {
+            column.className = 'col-12 col-md-6 col-xl-4';
+            card.classList.remove('news-card-expanded');
+            expandedContent.hidden = true;
+            readButton.hidden = false;
+          }
+          readButton.setAttribute('aria-expanded', String(expanded));
+        };
+
+        readButton.addEventListener('click', () => setExpanded(true));
+        collapseButton.addEventListener('click', () => {
+          setExpanded(false);
+          readButton.focus();
+        });
+
+        expandedContent.append(collapseBar, fullText);
+        content.append(readButton, expandedContent);
+      }
+
+      const actions = createElement('div', 'news-card-actions d-flex gap-2 mt-auto pt-4');
+      const editButton = createElement('button', 'btn news-edit-btn flex-grow-1');
+      editButton.type = 'button';
+      editButton.innerHTML = '<i class="bi bi-pencil me-2" aria-hidden="true"></i>Изменить';
+      editButton.addEventListener('click', () => openEditForm(item.id));
+      const deleteButton = createElement('button', 'btn news-delete-btn');
+      deleteButton.type = 'button';
+      deleteButton.setAttribute('aria-label', `Удалить новость: ${item.title}`);
+      deleteButton.innerHTML = '<i class="bi bi-trash3" aria-hidden="true"></i>';
+      deleteButton.addEventListener('click', () => deleteNews(item.id));
+      actions.append(editButton, deleteButton);
+      content.append(actions);
+      card.append(content);
+      column.append(card);
+      return column;
+    }
+
+    function renderNews() {
+      const query = newsSearch.value.trim().toLocaleLowerCase('ru-RU');
+      const filteredNews = newsItems
+        .filter(item => [item.title, item.category, item.excerpt, item.content]
+          .some(value => String(value || '').toLocaleLowerCase('ru-RU').includes(query)))
+        .sort((a, b) => String(b.date).localeCompare(String(a.date)));
+
+      newsList.replaceChildren(...filteredNews.map(createNewsCard));
+      newsCount.textContent = `Новостей: ${filteredNews.length}${query ? ` из ${newsItems.length}` : ''}`;
+      emptyState.hidden = filteredNews.length > 0;
+
+      if (query && filteredNews.length === 0) {
+        emptyTitle.textContent = 'Ничего не найдено';
+        emptyText.textContent = 'Попробуйте изменить поисковый запрос.';
+        document.getElementById('emptyAddButton').hidden = true;
+      } else {
+        emptyTitle.textContent = 'Пока нет новостей';
+        emptyText.textContent = 'Создайте первую запись, чтобы поделиться новостями команды.';
+        document.getElementById('emptyAddButton').hidden = false;
+      }
+    }
+
+    function resetForm() {
+      newsForm.reset();
+      document.getElementById('newsId').value = '';
+      newsImageFile.value = '';
+      setImagePreview('');
+      const today = new Date();
+      const localDate = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+      document.getElementById('newsDate').value = localDate;
+      formError.hidden = true;
+      formError.textContent = '';
+    }
+
+    function openCreateForm() {
+      resetForm();
+      document.getElementById('newsModalTitle').textContent = 'Новая новость';
+      document.getElementById('saveNewsButton').innerHTML = '<i class="bi bi-check2 me-2"></i>Сохранить';
+      newsModal.show();
+    }
+
+    function openEditForm(id) {
+      const item = newsItems.find(news => news.id === id);
+      if (!item) return;
+      resetForm();
+      document.getElementById('newsId').value = item.id;
+      document.getElementById('newsTitle').value = item.title;
+      document.getElementById('newsCategory').value = item.category;
+      document.getElementById('newsDate').value = item.date;
+      document.getElementById('newsExcerpt').value = item.excerpt || '';
+      document.getElementById('newsContent').value = item.content;
+      document.getElementById('newsImage').value = item.image && !item.image.startsWith('data:image/') ? item.image : '';
+      setImagePreview(item.image);
+      document.getElementById('newsModalTitle').textContent = 'Редактирование новости';
+      document.getElementById('saveNewsButton').innerHTML = '<i class="bi bi-check2 me-2"></i>Сохранить изменения';
+      newsModal.show();
+    }
+
+    function deleteNews(id) {
+      const item = newsItems.find(news => news.id === id);
+      if (!item || !window.confirm(`Удалить новость «${item.title}»?`)) return;
+      const previousItems = newsItems;
+      newsItems = newsItems.filter(news => news.id !== id);
+      if (!saveNews()) {
+        newsItems = previousItems;
+        return;
+      }
+      renderNews();
+      showToast('Новость удалена.');
+    }
+
+    newsForm.addEventListener('submit', async event => {
+      event.preventDefault();
+      if (!newsForm.reportValidity()) return;
+
+      const id = document.getElementById('newsId').value;
+      const imageUrlValue = document.getElementById('newsImage').value.trim();
+      if (imageUrlValue && !safeImageUrl(imageUrlValue)) {
+        formError.textContent = 'Укажите корректную ссылку на изображение, начинающуюся с http:// или https://.';
+        formError.hidden = false;
+        return;
+      }
+
+      const existingItem = newsItems.find(item => item.id === id);
+      let uploadedImage = '';
+      try {
+        if (newsImageFile.files[0]) uploadedImage = await compressImage(newsImageFile.files[0]);
+      } catch (error) {
+        formError.textContent = error.message;
+        formError.hidden = false;
+        return;
+      }
+      const imageValue = uploadedImage || safeImageUrl(imageUrlValue) || (existingItem && !imageUrlValue ? existingItem.image : '');
+      const item = {
+        id: id || (window.crypto && crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(16).slice(2)}`),
+        title: document.getElementById('newsTitle').value.trim(),
+        category: document.getElementById('newsCategory').value,
+        date: document.getElementById('newsDate').value,
+        excerpt: document.getElementById('newsExcerpt').value.trim(),
+        content: document.getElementById('newsContent').value.trim(),
+        image: imageValue,
+        createdAt: existingItem ? existingItem.createdAt : new Date().toISOString()
+      };
+
+      const previousItems = newsItems;
+      newsItems = existingItem
+        ? newsItems.map(news => news.id === id ? item : news)
+        : [item, ...newsItems];
+
+      if (!saveNews()) {
+        newsItems = previousItems;
+        return;
+      }
+
+      newsModal.hide();
+      renderNews();
+      showToast(existingItem ? 'Изменения сохранены.' : 'Новость добавлена.');
+    });
+
+    document.getElementById('addNewsButton').addEventListener('click', openCreateForm);
+    document.getElementById('emptyAddButton').addEventListener('click', openCreateForm);
+    newsSearch.addEventListener('input', renderNews);
+    newsImageFile.addEventListener('change', async () => {
+      const file = newsImageFile.files[0];
+      if (!file) return;
+      try {
+        setImagePreview(await compressImage(file));
+        formError.hidden = true;
+      } catch (error) {
+        setImagePreview('');
+        formError.textContent = error.message;
+        formError.hidden = false;
+      }
+    });
+    document.getElementById('newsImage').addEventListener('input', event => {
+      if (event.target.value.trim()) setImagePreview(event.target.value.trim());
+    });
+    newsModalElement.addEventListener('hidden.bs.modal', resetForm);
+
+    renderNews();
+  </script>
+  <script src="../site-search-index.js"></script>
+  <script src="../site-search.js"></script>
+</body>
+</html>

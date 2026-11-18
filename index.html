@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>munprizma</title>
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<title>munprizma</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="site-search.css">
 </head>
 <body class="site-body">
   <header class="site-header">
     <div class="container-fluid px-4 py-3 d-flex justify-content-between align-items-center">
       <nav class="d-flex gap-4">
         <a href="#" class="header-link">Главное</a>
-        <a href="#" class="header-link">Новости</a>
+        <a href="news/News.html" class="header-link">Новости</a>
         <a href="#" class="header-link">Проекты</a>
         <a href="avtors/avtors.html" class="header-link">О нас</a>
       </nav>
 
       <div class="d-flex align-items-center gap-3">
-        <a href="#" class="header-icon" aria-label="Закладки"><i class="bi bi-bookmark-fill"></i></a>
         <a href="avatar/login.html" class="header-icon" aria-label="Профиль"><i class="bi bi-person-fill"></i></a>
-        <a href="#" class="header-icon" aria-label="Поиск"><i class="bi bi-search"></i></a>
+        <button type="button" class="header-icon site-search-toggle" aria-label="Поиск" aria-expanded="false" aria-controls="siteSearchPanel"><i class="bi bi-search"></i></button>
       </div>
+        </div>
+
+    <div class="site-search-panel" id="siteSearchPanel" hidden>
+      <form class="site-search-form" id="siteSearchForm">
+        <label class="form-label" for="siteSearchInput">Поиск по сайту</label>
+        <div class="input-group">
+          <input class="form-control" id="siteSearchInput" type="search" placeholder="Введите слово или фразу" autocomplete="off" required>
+          <button class="btn site-search-submit" type="submit">Найти</button>
+        </div>
+      </form>
+      <div class="site-search-results" id="siteSearchResults" aria-live="polite"></div>
     </div>
   </header>
   <main class="min-vh-100 d-flex flex-column justify-content-center align-items-center py-5">
@@ -34,7 +48,7 @@
 
       <div class="row justify-content-center g-4">
         <div class="col-12 col-md-3">
-          <a href="#" class="action-card d-block p-4">
+          <a href="news/News.html" class="action-card d-block p-4">
             Новости
           </a>
         </div>
@@ -57,9 +71,7 @@
       <div class="row justify-content-between g-4">
         <div class="col-12 col-md-6">
           <div class="d-flex align-items-center gap-3 mb-3">
-            <div class="footer-logo-placeholder d-flex align-items-center justify-content-center">
-              <i class="bi bi-circle-fill"></i>
-            </div>
+            <img src="da.png" class="footer-logo-image" alt="Логотип munprizma" width="46" height="50">
             <span class="footer-brand">munprizma</span>
           </div>
           <p class="footer-desc mb-3">
@@ -71,12 +83,17 @@
             <a href="#" class="social-icon" aria-label="GitHub"><i class="bi bi-github"></i></a>
             <a href="#" class="social-icon" aria-label="RSS"><i class="bi bi-rss-fill"></i></a>
           </div>
+        
+          <a href="mailto:munprizmab51@gmail.com" class="footer-contact-button" aria-label="Связаться с командой по электронной почте">
+            <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+            <span>Связаться с командой</span>
+          </a>
         </div>
         <div class="col-12 col-md-4">
           <h6 class="footer-heading mb-3">Навигация</h6>
           <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
             <li><a href="#" class="footer-link">Главная</a></li>
-            <li><a href="#" class="footer-link">Новости</a></li>
+            <li><a href="news/News.html" class="footer-link">Новости</a></li>
             <li><a href="avtors/avtors.html" class="footer-link">Об авторах</a></li>
           </ul>
         </div>
@@ -97,5 +114,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="site-search-index.js"></script>
+  <script src="site-search.js"></script>
 </body>
 </html>

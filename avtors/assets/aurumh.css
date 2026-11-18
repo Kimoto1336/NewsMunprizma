@@ -312,15 +312,6 @@ a:focus-visible,
   border-top: 2px solid var(--line); 
   color: var(--muted);
 }
-.footer-logo-placeholder {
-  width: 45px; 
-  height: 45px;
-  border-radius: 50%;
-  background-color: var(--panel);
-  border: 1px solid var(--yellow);
-  color: var(--yellow);
-  font-size: 1.25rem;
-}
 .footer-brand {
   font-size: 1.5rem; 
   font-weight: 700;

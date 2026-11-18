@@ -186,15 +186,6 @@ body.site-body {
   background-color: var(--panel-bg);
   border-top: 2px solid var(--accent-cyan);
 }
-.footer-logo-placeholder {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background-color: #16191f;
-  border: 1px solid var(--accent-cyan);
-  color: var(--accent-cyan);
-  font-size: 1.25rem;
-}
 .footer-brand {
   font-size: 1.5rem;
   font-weight: 700;
